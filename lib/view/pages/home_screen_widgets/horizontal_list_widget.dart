@@ -1,5 +1,8 @@
 import 'package:deliveryapp/themes/colors.dart';
+import 'package:deliveryapp/view/pages/item_details_widgets/item_details_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 class HorizontalListWidget extends StatelessWidget {
   const HorizontalListWidget({super.key});
@@ -95,7 +98,9 @@ class HorizontalListWidget extends StatelessWidget {
                   width: 20,
                   height: 20,
                   child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => ItemDetailsScreen());
+                    },
                     child: Icon(Icons.add, size: 20),
                   ),
                 ),

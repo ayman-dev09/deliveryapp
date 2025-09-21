@@ -54,3 +54,4 @@ const Color lightyellow = Color(0xFFEFE4D2);
 const Color gentianblue = Color(0xFF254D70);
 const Color deepSlateBlue = Color(0xFF131D4F);
 const Color darkModerateOrange = Color(0xFF954C2E);
+const Color paletteColor = Color(0xFFe1dfdd);
