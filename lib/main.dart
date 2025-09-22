@@ -1,5 +1,6 @@
 import 'package:deliveryapp/utils/size_config.dart';
-import 'package:deliveryapp/view/pages/home_screen.dart';
+import 'package:deliveryapp/view/pages/cart_screen_widgets/cart_screen.dart';
+//import 'package:deliveryapp/view/pages/home_screen.dart';
 //import 'package:deliveryapp/view/pages/item_details_widgets/item_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     SizeConfig().init(context);
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: CartScreen(),
       //getPages: RoutesConfig().getPages,
     );
   }
