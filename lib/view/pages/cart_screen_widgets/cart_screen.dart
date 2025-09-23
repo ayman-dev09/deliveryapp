@@ -1,4 +1,9 @@
-import 'package:deliveryapp/themes/colors.dart';
+import 'package:deliveryapp/view/pages/general_widgets/button_yellow_widget.dart';
+import 'package:deliveryapp/view/pages/general_widgets/divider_bold_widget.dart';
+import 'package:deliveryapp/view/pages/general_widgets/headline_widget.dart';
+import 'package:deliveryapp/view/pages/cart_screen_widgets/order_choices_widget.dart';
+import 'package:deliveryapp/view/pages/cart_screen_widgets/order_note_textfield_widget.dart';
+import 'package:deliveryapp/view/pages/cart_screen_widgets/order_summary_widget.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
@@ -21,152 +26,19 @@ class CartScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 20, top: 40),
+        padding: const EdgeInsets.only(top: 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Classic Angus Hngerstaion',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5),
-                      child: Text('1x Water', style: TextStyle(fontSize: 12)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 25),
-                      child: Text(
-                        '29 SAR',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.red,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Spacer(),
-                Card(
-                  elevation: 10,
-                  child: Container(
-                    width: 140,
-                    height: 140,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      image: DecorationImage(
-                        image: AssetImage('assets/list_food_images/burger.png'),
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 35),
-              child: Divider(thickness: 15, color: paletteColor),
-            ),
-            //----------------------------------------------------------------
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Text(
-                'Special Requests',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
-            //----------------------------------------------------------------
-            Padding(
-              padding: const EdgeInsets.only(top: 35),
-              child: Divider(thickness: 15, color: paletteColor),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Text(
-                'Order Summary',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Row(
-                children: [
-                  Text(
-                    'Order Total',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  Spacer(),
-                  Text(
-                    '41.43 SAR',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 15),
-              child: Row(
-                children: [
-                  Text(
-                    'Basket Discount',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  Spacer(),
-                  Text(
-                    '12.43 SAR',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.red,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: Divider(color: paletteColor),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 15),
-              child: Row(
-                children: [
-                  Text(
-                    'Total',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Spacer(),
-                  Text('29 SAR', style: TextStyle(fontWeight: FontWeight.bold)),
-                ],
-              ),
-            ),
+            OrderChoicesWidget(),
+            DividerBoldWidget(),
+            HeadlineWidget(text: 'Special Requests'),
+            OrderNoteTextfieldWidget(),
+            DividerBoldWidget(),
+            HeadlineWidget(text: 'Order Summary'),
+            OrderSummaryWidget(),
             Spacer(),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 120),
-              child: Container(
-                width: double.infinity,
-                height: 60,
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Center(
-                  child: Text(
-                    'Checkout',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-            ),
+            ButtonYellowWidget(),
           ],
         ),
       ),

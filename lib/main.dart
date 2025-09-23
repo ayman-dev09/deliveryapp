@@ -1,5 +1,6 @@
 import 'package:deliveryapp/utils/size_config.dart';
 import 'package:deliveryapp/view/pages/cart_screen_widgets/cart_screen.dart';
+//import 'package:deliveryapp/view/pages/checkout_screen_widgets/checkout_screen.dart';
 //import 'package:deliveryapp/view/pages/home_screen.dart';
 //import 'package:deliveryapp/view/pages/item_details_widgets/item_details_screen.dart';
 import 'package:flutter/material.dart';
