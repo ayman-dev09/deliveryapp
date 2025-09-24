@@ -1,3 +1,4 @@
+import 'package:deliveryapp/view/pages/checkout_screen_widgets/checkout_screen.dart';
 import 'package:deliveryapp/view/pages/general_widgets/button_yellow_widget.dart';
 import 'package:deliveryapp/view/pages/general_widgets/divider_bold_widget.dart';
 import 'package:deliveryapp/view/pages/general_widgets/headline_widget.dart';
@@ -5,6 +6,8 @@ import 'package:deliveryapp/view/pages/cart_screen_widgets/order_choices_widget.
 import 'package:deliveryapp/view/pages/cart_screen_widgets/order_note_textfield_widget.dart';
 import 'package:deliveryapp/view/pages/cart_screen_widgets/order_summary_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -38,7 +41,12 @@ class CartScreen extends StatelessWidget {
             HeadlineWidget(text: 'Order Summary'),
             OrderSummaryWidget(),
             Spacer(),
-            ButtonYellowWidget(),
+            ButtonYellowWidget(
+              text: 'Checkout',
+              onTap: () {
+                Get.to(() => CheckoutScreen());
+              },
+            ),
           ],
         ),
       ),
