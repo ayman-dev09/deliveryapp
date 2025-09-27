@@ -1,30 +1,63 @@
 import 'package:deliveryapp/themes/colors.dart';
-import 'package:deliveryapp/view/pages/item_details_widgets/item_details_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 
 class HorizontalListWidget extends StatelessWidget {
-  const HorizontalListWidget({super.key});
+  const HorizontalListWidget({
+    super.key,
+    required this.listTitle,
+    required this.seeMoreText,
+    required this.imageName,
+    required this.mealName,
+    required this.restaurantName,
+    required this.price,
+    required this.distanceandTime,
+    required this.floatingButton,
+  });
+  final String listTitle;
+  final String seeMoreText;
+  final String imageName;
+  final String mealName;
+  final String restaurantName;
+  final String price;
+  final String distanceandTime;
+  final Function()? floatingButton;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20),
-      child: SizedBox(
-        width: double.infinity,
-        height: 320,
-        //color: Colors.blue,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 20, left: 25),
-          child: SizedBox(
-            height: 220,
+      padding: const EdgeInsets.only(left: 20, top: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                listTitle,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+              Spacer(),
+              Text(
+                seeMoreText,
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(width: 20),
+            ],
+          ),
+          SizedBox(height: 5),
+          SizedBox(
+            height: 270,
             child: ListView.builder(
               itemCount: 10,
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemBuilder: (_, index) {
                 return Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(right: 10),
@@ -35,7 +68,7 @@ class HorizontalListWidget extends StatelessWidget {
               },
             ),
           ),
-        ),
+        ],
       ),
     );
   }
@@ -56,7 +89,7 @@ class HorizontalListWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
               child: Image.asset(
-                'assets/list_food_images/burger.png',
+                imageName,
                 width: double.maxFinite,
                 height: 100,
                 fit: BoxFit.contain,
@@ -65,28 +98,28 @@ class HorizontalListWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 10, left: 10, right: 20),
               child: Text(
-                'King Chicken Crispy combo',
+                mealName,
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
               child: Text(
-                'Burger King',
+                restaurantName,
                 style: TextStyle(fontSize: 12, color: darkModerateOrange),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
               child: Text(
-                '20 SAR',
+                price,
                 style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
               child: Text(
-                '30-40 min  6.2 km',
+                distanceandTime,
                 style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
               ),
             ),
@@ -98,9 +131,7 @@ class HorizontalListWidget extends StatelessWidget {
                   width: 20,
                   height: 20,
                   child: FloatingActionButton(
-                    onPressed: () {
-                      Get.to(() => ItemDetailsScreen());
-                    },
+                    onPressed: floatingButton,
                     child: Icon(Icons.add, size: 20),
                   ),
                 ),
