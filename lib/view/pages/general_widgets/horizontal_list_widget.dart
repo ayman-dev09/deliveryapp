@@ -15,7 +15,7 @@ class HorizontalListWidget extends StatelessWidget {
   });
   final String listTitle;
   final String seeMoreText;
-  final String imageName;
+  final List imageName;
   final String mealName;
   final String restaurantName;
   final String price;
@@ -52,7 +52,7 @@ class HorizontalListWidget extends StatelessWidget {
           SizedBox(
             height: 270,
             child: ListView.builder(
-              itemCount: 10,
+              itemCount: imageName.length,
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemBuilder: (_, index) {
@@ -60,8 +60,8 @@ class HorizontalListWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: item(),
+                      padding: const EdgeInsets.only(right: 5),
+                      child: item(index),
                     ),
                   ],
                 );
@@ -73,7 +73,7 @@ class HorizontalListWidget extends StatelessWidget {
     );
   }
 
-  Widget item() {
+  Widget item(int index) {
     return Card(
       elevation: 5,
       child: Container(
@@ -89,7 +89,7 @@ class HorizontalListWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
               child: Image.asset(
-                imageName,
+                imageName[index],
                 width: double.maxFinite,
                 height: 100,
                 fit: BoxFit.contain,

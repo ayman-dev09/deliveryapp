@@ -9,3 +9,20 @@ const productDemoImg6 = "https://i.imgur.com/JfyZlnO.png";
 const double defaultPadding = 16.0;
 const double defaultBorderRadious = 12.0;
 const Duration defaultDuration = Duration(milliseconds: 300);
+
+// images
+//meals
+const kigCrispyComboImage = 'assets/list_food_images/burger.png';
+const kfcMealImage = 'assets/list_food_images/meals/kfc-meal.png';
+const pastaItalianImage = 'assets/list_food_images/meals/pasta-italian.jpg';
+const pizzaImage = 'assets/list_food_images/meals/pizza.jpg';
+const riceImage = 'assets/list_food_images/meals/rice.png';
+const tastyChickenBurgerImage =
+    'assets/list_food_images/meals/tasty-chicken-burger.png';
+
+//restaurant
+const burgerKingImage = 'assets/list_food_images/restaurant/burger-king.png';
+const dominoPizzaImage = 'assets/list_food_images/restaurant/domino-pizza.png';
+const maestrasImage = 'assets/list_food_images/restaurant/maestras.png';
+const mcdonaldsImage = 'assets/list_food_images/restaurant/mcdonalds.png';
+const subwayImage = 'assets/list_food_images/restaurant/subway.png';
