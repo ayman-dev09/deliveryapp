@@ -42,6 +42,10 @@ class CartScreen extends StatelessWidget {
             OrderSummaryWidget(),
             Spacer(),
             ButtonYellowWidget(
+              paddingLeft: 20,
+              paddingRight: 20,
+              paddingTop: 0,
+              paddingBottom: 120,
               text: 'Checkout',
               onTap: () {
                 Get.to(() => CheckoutScreen());

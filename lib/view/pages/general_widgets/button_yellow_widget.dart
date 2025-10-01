@@ -5,14 +5,27 @@ class ButtonYellowWidget extends StatelessWidget {
     super.key,
     required this.text,
     required this.onTap,
+    required this.paddingLeft,
+    required this.paddingRight,
+    required this.paddingTop,
+    required this.paddingBottom,
   });
   final String text;
   final Function()? onTap;
+  final double paddingLeft;
+  final double paddingRight;
+  final double paddingTop;
+  final double paddingBottom;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, bottom: 120),
+      padding: EdgeInsets.fromLTRB(
+        paddingLeft,
+        paddingTop,
+        paddingRight,
+        paddingBottom,
+      ),
       child: InkWell(
         onTap: onTap,
         child: Container(

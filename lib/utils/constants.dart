@@ -14,8 +14,8 @@ const Duration defaultDuration = Duration(milliseconds: 300);
 //meals
 const kigCrispyComboImage = 'assets/list_food_images/burger.png';
 const kfcMealImage = 'assets/list_food_images/meals/kfc-meal.png';
-const pastaItalianImage = 'assets/list_food_images/meals/pasta-italian.jpg';
-const pizzaImage = 'assets/list_food_images/meals/pizza.jpg';
+const pastaItalianImage = 'assets/list_food_images/meals/pasta-italian.png';
+const pizzaImage = 'assets/list_food_images/meals/pizza.png';
 const riceImage = 'assets/list_food_images/meals/rice.png';
 const tastyChickenBurgerImage =
     'assets/list_food_images/meals/tasty-chicken-burger.png';

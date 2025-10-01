@@ -12,6 +12,7 @@ class HorizontalListWidget extends StatelessWidget {
     required this.price,
     required this.distanceandTime,
     required this.floatingButton,
+    required this.onTap,
   });
   final String listTitle;
   final String seeMoreText;
@@ -21,6 +22,7 @@ class HorizontalListWidget extends StatelessWidget {
   final String price;
   final String distanceandTime;
   final Function()? floatingButton;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -74,70 +76,73 @@ class HorizontalListWidget extends StatelessWidget {
   }
 
   Widget item(int index) {
-    return Card(
-      elevation: 5,
-      child: Container(
-        width: 160,
-        height: 260,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          //color: Colors.amber,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
-              child: Image.asset(
-                imageName[index],
-                width: double.maxFinite,
-                height: 100,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10, left: 10, right: 20),
-              child: Text(
-                mealName,
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
-              child: Text(
-                restaurantName,
-                style: TextStyle(fontSize: 12, color: darkModerateOrange),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
-              child: Text(
-                price,
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
-              child: Text(
-                distanceandTime,
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 20,
-                  height: 20,
-                  child: FloatingActionButton(
-                    onPressed: floatingButton,
-                    child: Icon(Icons.add, size: 20),
-                  ),
+    return InkWell(
+      onTap: onTap,
+      child: Card(
+        elevation: 5,
+        child: Container(
+          width: 160,
+          height: 260,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            //color: Colors.amber,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+                child: Image.asset(
+                  imageName[index],
+                  width: double.infinity,
+                  height: 100,
+                  fit: BoxFit.contain,
                 ),
-              ],
-            ),
-          ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, left: 10, right: 20),
+                child: Text(
+                  mealName,
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
+                child: Text(
+                  restaurantName,
+                  style: TextStyle(fontSize: 12, color: darkModerateOrange),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
+                child: Text(
+                  price,
+                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
+                child: Text(
+                  distanceandTime,
+                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(height: 15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: FloatingActionButton(
+                      onPressed: floatingButton,
+                      child: Icon(Icons.add, size: 20),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

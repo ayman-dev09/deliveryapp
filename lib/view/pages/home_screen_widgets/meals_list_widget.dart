@@ -8,7 +8,9 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 class MealsListWidget extends StatelessWidget {
-  MealsListWidget({super.key});
+  MealsListWidget({super.key, required this.floatingButton});
+
+  final dynamic Function()? floatingButton;
 
   List mealsImages = [
     kigCrispyComboImage,
@@ -29,7 +31,8 @@ class MealsListWidget extends StatelessWidget {
       restaurantName: 'Burger King',
       price: '20 SAR',
       distanceandTime: '30-40 min  6.2 km',
-      floatingButton: () {
+      floatingButton: floatingButton,
+      onTap: () {
         Get.to(() => ItemDetailsScreen());
       },
     );
