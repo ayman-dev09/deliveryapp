@@ -10,7 +10,8 @@ const double defaultPadding = 16.0;
 const double defaultBorderRadious = 12.0;
 const Duration defaultDuration = Duration(milliseconds: 300);
 
-// images
+//yalla app logo
+const yallaLogoApp = 'assets/images/logo/yallaapp.png';
 //meals
 const kigCrispyComboImage = 'assets/list_food_images/burger.png';
 const kfcMealImage = 'assets/list_food_images/meals/kfc-meal.png';

@@ -2,7 +2,7 @@
 
 import 'package:deliveryapp/utils/constants.dart';
 import 'package:deliveryapp/view/pages/general_widgets/horizontal_list_widget.dart';
-import 'package:deliveryapp/view/pages/item_details_widgets/item_details_screen.dart';
+import 'package:deliveryapp/view/pages/item_details_widgets/meal_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -33,7 +33,7 @@ class MealsListWidget extends StatelessWidget {
       distanceandTime: '30-40 min  6.2 km',
       floatingButton: floatingButton,
       onTap: () {
-        Get.to(() => ItemDetailsScreen());
+        Get.to(() => MealDetailsScreen());
       },
     );
   }
