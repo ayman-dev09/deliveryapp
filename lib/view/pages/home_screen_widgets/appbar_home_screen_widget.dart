@@ -18,18 +18,20 @@ class AppbarHomeScreenWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 25, right: 25, top: 40),
+                padding: EdgeInsets.only(
+                  left: SizeConfig.defaultSize! * 1.8,
+                  right: SizeConfig.defaultSize! * 1.8,
+                  top: SizeConfig.defaultSize! * 2.8,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
-                          //crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Icon(
                               Icons.location_on_outlined,
@@ -38,7 +40,7 @@ class AppbarHomeScreenWidget extends StatelessWidget {
                             Text(
                               'Deliver to',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: SizeConfig.defaultSize! * 1.3,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -52,7 +54,7 @@ class AppbarHomeScreenWidget extends StatelessWidget {
                         Text(
                           'Select your location',
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: SizeConfig.defaultSize! * 0.9,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
@@ -64,26 +66,27 @@ class AppbarHomeScreenWidget extends StatelessWidget {
                     Icon(
                       Icons.shopping_bag_outlined,
                       color: Colors.white,
-                      size: 25,
+                      size: SizeConfig.defaultSize! * 1.7,
                     ),
                   ],
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  right: 25,
-                  left: 25,
-                  top: 15,
-                  // bottom: SizeConfig.defaultSize! * 6.5,
+                  right: SizeConfig.defaultSize! * 1.8,
+                  left: SizeConfig.defaultSize! * 1.8,
+                  top: SizeConfig.defaultSize! * 1.2,
                 ),
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Container(
                     width: double.infinity,
-                    height: 45,
+                    height: SizeConfig.defaultSize! * 3,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(
+                        SizeConfig.defaultSize! * 0.5,
+                      ),
                     ),
                     child: TextField(
                       decoration: InputDecoration(

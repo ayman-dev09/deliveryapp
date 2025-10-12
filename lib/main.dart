@@ -1,5 +1,5 @@
+import 'package:deliveryapp/routes/routes_config.dart';
 import 'package:deliveryapp/utils/size_config.dart';
-import 'package:deliveryapp/view/auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     SizeConfig().init(context);
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
-      //getPages: RoutesConfig().getPages,
+      // home: LoginScreen(),
+      getPages: RoutesConfig().getPages,
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class UsernameTextWidget extends StatelessWidget {
@@ -6,7 +7,11 @@ class UsernameTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25, right: 25, top: 15),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.8,
+        right: SizeConfig.defaultSize! * 1.8,
+        top: SizeConfig.defaultSize! * 1.1,
+      ),
       child: RichText(
         text: TextSpan(
           children: [

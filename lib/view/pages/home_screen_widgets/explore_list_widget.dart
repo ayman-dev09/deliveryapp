@@ -15,7 +15,7 @@ class ExploreListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HorizontalCircularListWidget(
-      listTitle: 'explore cuisines',
+      listTitle: 'Explore cuisines',
       seeMoreText: 'See More',
       imageName: restaurantImages,
       restaurantName: 'Burger King',

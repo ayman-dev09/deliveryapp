@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class HorizontalCircularListWidget extends StatelessWidget {
@@ -16,7 +17,10 @@ class HorizontalCircularListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, top: 30),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.8,
+        top: SizeConfig.defaultSize! * 2.1,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,7 +30,10 @@ class HorizontalCircularListWidget extends StatelessWidget {
             children: [
               Text(
                 listTitle,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: SizeConfig.defaultSize! * 1.4,
+                ),
               ),
               Spacer(),
               Text(
@@ -34,17 +41,17 @@ class HorizontalCircularListWidget extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.blue,
                   fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                  fontSize: SizeConfig.defaultSize! * 1.1,
                 ),
               ),
-              SizedBox(width: 20),
+              SizedBox(width: SizeConfig.defaultSize! * 1.8),
             ],
           ),
           //last list title
-          SizedBox(height: 5),
+          SizedBox(height: SizeConfig.defaultSize! * 0.4),
           // list
           SizedBox(
-            height: 115,
+            height: SizeConfig.defaultSize! * 8,
             child: ListView.builder(
               itemCount: imageName.length,
               shrinkWrap: true,
@@ -54,19 +61,21 @@ class HorizontalCircularListWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(right: 5),
+                      padding: EdgeInsets.only(
+                        right: SizeConfig.defaultSize! * 0.4,
+                      ),
                       child: item(index),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(
-                        top: 5,
-                        left: 10,
-                        right: 20,
+                      padding: EdgeInsets.only(
+                        top: SizeConfig.defaultSize! * 0.4,
+                        left: SizeConfig.defaultSize! * 0.7,
+                        right: SizeConfig.defaultSize! * 1.4,
                       ),
                       child: Text(
                         restaurantName,
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: SizeConfig.defaultSize! * 0.9,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -85,8 +94,8 @@ class HorizontalCircularListWidget extends StatelessWidget {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(180)),
       child: Container(
-        width: 80,
-        height: 80,
+        width: SizeConfig.defaultSize! * 5.5,
+        height: SizeConfig.defaultSize! * 5.5,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(180),
           //color: Colors.amber,
@@ -97,8 +106,8 @@ class HorizontalCircularListWidget extends StatelessWidget {
           children: [
             Image.asset(
               imageName[index],
-              width: 50,
-              height: 50,
+              width: SizeConfig.defaultSize! * 3.7,
+              height: SizeConfig.defaultSize! * 3.7,
               fit: BoxFit.contain,
             ),
           ],
