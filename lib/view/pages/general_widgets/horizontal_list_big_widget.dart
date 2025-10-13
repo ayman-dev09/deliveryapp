@@ -1,4 +1,5 @@
 import 'package:deliveryapp/themes/colors.dart';
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class HorizontalListBigWidget extends StatelessWidget {
@@ -19,7 +20,10 @@ class HorizontalListBigWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, top: 20),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.8,
+        top: SizeConfig.defaultSize! * 1.8,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,7 +32,10 @@ class HorizontalListBigWidget extends StatelessWidget {
             children: [
               Text(
                 listTitle,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: SizeConfig.defaultSize! * 1.4,
+                ),
               ),
               Spacer(),
               Text(
@@ -36,15 +43,15 @@ class HorizontalListBigWidget extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.blue,
                   fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                  fontSize: SizeConfig.defaultSize! * 1.1,
                 ),
               ),
-              SizedBox(width: 20),
+              SizedBox(width: SizeConfig.defaultSize! * 1.4),
             ],
           ),
-          SizedBox(height: 5),
+          SizedBox(height: SizeConfig.defaultSize! * 0.4),
           SizedBox(
-            height: 180,
+            height: SizeConfig.defaultSize! * 12.8,
             child: ListView.builder(
               itemCount: imageName.length,
               shrinkWrap: true,
@@ -54,7 +61,9 @@ class HorizontalListBigWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(right: 5),
+                      padding: EdgeInsets.only(
+                        right: SizeConfig.defaultSize! * 0.4,
+                      ),
                       child: item(index),
                     ),
                   ],
@@ -71,36 +80,54 @@ class HorizontalListBigWidget extends StatelessWidget {
     return Card(
       //elevation: 5,
       child: Container(
-        width: 300,
-        height: 170,
+        width: SizeConfig.defaultSize! * 20.9,
+        height: SizeConfig.defaultSize! * 11.8,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
           //color: Colors.amber,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+              padding: EdgeInsets.only(
+                top: SizeConfig.defaultSize! * 0.7,
+                left: SizeConfig.defaultSize! * 1.4,
+                right: SizeConfig.defaultSize! * 1.4,
+              ),
               child: Image.asset(
                 imageName[index],
                 width: double.maxFinite,
-                height: 100,
+                height: SizeConfig.defaultSize! * 7,
                 fit: BoxFit.contain,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 10, left: 10, right: 20),
+              padding: EdgeInsets.only(
+                top: SizeConfig.defaultSize! * 0.7,
+                left: SizeConfig.defaultSize! * 0.7,
+                right: SizeConfig.defaultSize! * 1.4,
+              ),
               child: Text(
                 restaurantName,
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: SizeConfig.defaultSize! * 0.85,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
+              padding: EdgeInsets.only(
+                top: SizeConfig.defaultSize! * 0.4,
+                left: SizeConfig.defaultSize! * 0.7,
+                right: SizeConfig.defaultSize! * 1.4,
+              ),
               child: Text(
                 subtitleRestaurant,
-                style: TextStyle(fontSize: 12, color: darkModerateOrange),
+                style: TextStyle(
+                  fontSize: SizeConfig.defaultSize! * 0.85,
+                  color: darkModerateOrange,
+                ),
               ),
             ),
           ],

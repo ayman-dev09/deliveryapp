@@ -88,15 +88,15 @@ class LoginScreen extends StatelessWidget {
           TextButtonWidget(
             paddingLeft: 0,
             paddingRight: SizeConfig.defaultSize! * 6,
-            paddingTop: SizeConfig.defaultSize! * 0.6,
+            paddingTop: SizeConfig.defaultSize! * 1,
             paddingBottom: 0,
             onPressed: () {},
             text: 'Forget Password ?',
           ),
           TextWithTextbuttonWidget(
-            paddingLeft: SizeConfig.defaultSize! * 6,
+            paddingLeft: 0, //SizeConfig.defaultSize! * 6
             paddingRight: 0,
-            paddingTop: 0,
+            paddingTop: SizeConfig.defaultSize! * 0.7,
             paddingBottom: 0,
             onPressed: () {},
             text: 'to register a new account ?',

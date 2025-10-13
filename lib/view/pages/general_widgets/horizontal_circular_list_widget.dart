@@ -19,7 +19,7 @@ class HorizontalCircularListWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
         left: SizeConfig.defaultSize! * 1.8,
-        top: SizeConfig.defaultSize! * 2.1,
+        top: SizeConfig.defaultSize! * 1.8,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,7 +51,7 @@ class HorizontalCircularListWidget extends StatelessWidget {
           SizedBox(height: SizeConfig.defaultSize! * 0.4),
           // list
           SizedBox(
-            height: SizeConfig.defaultSize! * 8,
+            height: SizeConfig.defaultSize! * 8.1,
             child: ListView.builder(
               itemCount: imageName.length,
               shrinkWrap: true,

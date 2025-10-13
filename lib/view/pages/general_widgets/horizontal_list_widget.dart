@@ -1,4 +1,5 @@
 import 'package:deliveryapp/themes/colors.dart';
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class HorizontalListWidget extends StatelessWidget {
@@ -27,16 +28,23 @@ class HorizontalListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, top: 20),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.8,
+        top: SizeConfig.defaultSize! * 1.8,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          //list title
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 listTitle,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: SizeConfig.defaultSize! * 1.4,
+                ),
               ),
               Spacer(),
               Text(
@@ -44,15 +52,17 @@ class HorizontalListWidget extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.blue,
                   fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                  fontSize: SizeConfig.defaultSize! * 1.1,
                 ),
               ),
-              SizedBox(width: 20),
+              SizedBox(width: SizeConfig.defaultSize! * 1.8),
             ],
           ),
-          SizedBox(height: 5),
+          //last list title
+          SizedBox(height: SizeConfig.defaultSize! * 0.4),
+          // list
           SizedBox(
-            height: 270,
+            height: SizeConfig.defaultSize! * 19,
             child: ListView.builder(
               itemCount: imageName.length,
               shrinkWrap: true,
@@ -62,7 +72,9 @@ class HorizontalListWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(right: 5),
+                      padding: EdgeInsets.only(
+                        right: SizeConfig.defaultSize! * 0.35,
+                      ),
                       child: item(index),
                     ),
                   ],
@@ -79,64 +91,99 @@ class HorizontalListWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Card(
-        elevation: 5,
+        // elevation: 2,
         child: Container(
-          width: 160,
-          height: 260,
+          width: SizeConfig.defaultSize! * 11.1,
+          height: SizeConfig.defaultSize! * 18.1,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
             //color: Colors.amber,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+                padding: EdgeInsets.only(
+                  top: SizeConfig.defaultSize! * 0.7,
+                  left: SizeConfig.defaultSize! * 1.4,
+                  right: SizeConfig.defaultSize! * 1.4,
+                ),
                 child: Image.asset(
                   imageName[index],
                   width: double.infinity,
-                  height: 100,
+                  height: SizeConfig.defaultSize! * 7,
                   fit: BoxFit.contain,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10, left: 10, right: 20),
+                padding: EdgeInsets.only(
+                  top: SizeConfig.defaultSize! * 0.7,
+                  left: SizeConfig.defaultSize! * 0.7,
+                  right: SizeConfig.defaultSize! * 1.4,
+                ),
                 child: Text(
                   mealName,
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: SizeConfig.defaultSize! * 0.85,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
+                padding: EdgeInsets.only(
+                  top: SizeConfig.defaultSize! * 0.4,
+                  left: SizeConfig.defaultSize! * 0.7,
+                  right: SizeConfig.defaultSize! * 1.4,
+                ),
                 child: Text(
                   restaurantName,
-                  style: TextStyle(fontSize: 12, color: darkModerateOrange),
+                  style: TextStyle(
+                    fontSize: SizeConfig.defaultSize! * 0.85,
+                    color: darkModerateOrange,
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
+                padding: EdgeInsets.only(
+                  top: SizeConfig.defaultSize! * 0.4,
+                  left: SizeConfig.defaultSize! * 0.7,
+                  right: SizeConfig.defaultSize! * 1.4,
+                ),
                 child: Text(
                   price,
-                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: SizeConfig.defaultSize! * 0.7,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 5, left: 10, right: 20),
+                padding: EdgeInsets.only(
+                  top: SizeConfig.defaultSize! * 0.4,
+                  left: SizeConfig.defaultSize! * 0.7,
+                  right: SizeConfig.defaultSize! * 1.4,
+                ),
                 child: Text(
                   distanceandTime,
-                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: SizeConfig.defaultSize! * 0.7,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: SizeConfig.defaultSize! * 0.9),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    width: 20,
-                    height: 20,
+                    width: SizeConfig.defaultSize! * 1.4,
+                    height: SizeConfig.defaultSize! * 1.4,
                     child: FloatingActionButton(
                       onPressed: floatingButton,
-                      child: Icon(Icons.add, size: 20),
+                      child: Icon(
+                        Icons.add,
+                        size: SizeConfig.defaultSize! * 1.4,
+                      ),
                     ),
                   ),
                 ],

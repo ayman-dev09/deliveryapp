@@ -31,6 +31,7 @@ class TextWithTextbuttonWidget extends StatelessWidget {
         paddingBottom,
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(text, style: TextStyle(color: paletteColor)),
