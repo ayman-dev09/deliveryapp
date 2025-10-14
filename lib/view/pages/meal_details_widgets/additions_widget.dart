@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class AdditionsWidget extends StatefulWidget {
@@ -22,13 +23,23 @@ class _AdditionsWidgetState extends State<AdditionsWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+          padding: EdgeInsets.only(
+            top: SizeConfig.defaultSize! * 0.8,
+            left: SizeConfig.defaultSize! * 1.8,
+            right: SizeConfig.defaultSize! * 1.8,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(widget.textAdditions, style: TextStyle(fontSize: 16)),
+              Text(
+                widget.textAdditions,
+                style: TextStyle(fontSize: SizeConfig.defaultSize! * 1.1),
+              ),
               Spacer(),
-              Text(widget.price, style: TextStyle(fontSize: 16)),
+              Text(
+                widget.price,
+                style: TextStyle(fontSize: SizeConfig.defaultSize! * 1.1),
+              ),
               Checkbox(
                 value: isChecked,
                 onChanged: (bool? value) {
@@ -41,7 +52,11 @@ class _AdditionsWidgetState extends State<AdditionsWidget> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 35, top: 5),
+          padding: EdgeInsets.only(
+            left: SizeConfig.defaultSize! * 1.8,
+            right: SizeConfig.defaultSize! * 1.8,
+            top: SizeConfig.defaultSize! * 0.1,
+          ),
           child: Divider(),
         ),
       ],

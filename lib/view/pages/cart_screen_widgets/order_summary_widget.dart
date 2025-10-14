@@ -1,4 +1,5 @@
 import 'package:deliveryapp/themes/colors.dart';
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class OrderSummaryWidget extends StatelessWidget {
@@ -7,20 +8,28 @@ class OrderSummaryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.8,
+        right: SizeConfig.defaultSize! * 1.8,
+        top: SizeConfig.defaultSize! * 1.1,
+      ),
       child: Container(
         decoration: BoxDecoration(
           //color: Colors.amber,
           border: Border.all(),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10, bottom: 12),
+          padding: EdgeInsets.only(
+            left: SizeConfig.defaultSize! * 0.7,
+            right: SizeConfig.defaultSize! * 0.7,
+            bottom: SizeConfig.defaultSize! * 0.9,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: SizeConfig.defaultSize! * 1.4),
                 child: Row(
                   children: [
                     Text(
@@ -36,7 +45,7 @@ class OrderSummaryWidget extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15),
+                padding: EdgeInsets.only(top: SizeConfig.defaultSize! * 1.1),
                 child: Row(
                   children: [
                     Text(
@@ -55,17 +64,17 @@ class OrderSummaryWidget extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(top: SizeConfig.defaultSize! * 0.7),
                 child: Divider(color: paletteColor),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15),
+                padding: EdgeInsets.only(top: SizeConfig.defaultSize! * 1.1),
                 child: Row(
                   children: [
                     Text(
                       'Total',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: SizeConfig.defaultSize! * 1.2,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

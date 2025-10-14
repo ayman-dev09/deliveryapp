@@ -1,4 +1,5 @@
 import 'package:deliveryapp/themes/colors.dart';
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class DividerLargeWidget extends StatelessWidget {
@@ -7,8 +8,11 @@ class DividerLargeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 25),
-      child: Divider(thickness: 15, color: paletteColor),
+      padding: EdgeInsets.only(top: SizeConfig.defaultSize! * 1.7),
+      child: Divider(
+        thickness: SizeConfig.defaultSize! * 1,
+        color: paletteColor,
+      ),
     );
   }
 }

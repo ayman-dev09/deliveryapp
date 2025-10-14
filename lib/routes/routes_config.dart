@@ -4,7 +4,7 @@ import 'package:deliveryapp/view/auth/signup_screen.dart';
 import 'package:deliveryapp/view/pages/cart_screen_widgets/cart_screen.dart';
 import 'package:deliveryapp/view/pages/checkout_screen_widgets/checkout_screen.dart';
 import 'package:deliveryapp/view/pages/home_screen.dart';
-import 'package:deliveryapp/view/pages/item_details_widgets/meal_details_screen.dart';
+import 'package:deliveryapp/view/pages/meal_details_widgets/meal_details_screen.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 class RoutesConfig {

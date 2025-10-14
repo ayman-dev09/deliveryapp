@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class OrderNoteTextfieldWidget extends StatelessWidget {
@@ -6,7 +7,11 @@ class OrderNoteTextfieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.4,
+        right: SizeConfig.defaultSize! * 1.4,
+        top: SizeConfig.defaultSize! * 1.4,
+      ),
       child: TextField(
         focusNode: AlwaysFocusedNode(),
         decoration: InputDecoration(

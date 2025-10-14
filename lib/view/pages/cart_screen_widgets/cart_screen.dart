@@ -1,8 +1,9 @@
+import 'package:deliveryapp/utils/size_config.dart';
+import 'package:deliveryapp/view/pages/cart_screen_widgets/all_order_choices_widget.dart';
 import 'package:deliveryapp/view/pages/checkout_screen_widgets/checkout_screen.dart';
 import 'package:deliveryapp/view/pages/general_widgets/button_yellow_widget.dart';
 import 'package:deliveryapp/view/pages/general_widgets/divider_bold_widget.dart';
 import 'package:deliveryapp/view/pages/general_widgets/headline_widget.dart';
-import 'package:deliveryapp/view/pages/cart_screen_widgets/order_choices_widget.dart';
 import 'package:deliveryapp/view/pages/cart_screen_widgets/order_note_textfield_widget.dart';
 import 'package:deliveryapp/view/pages/cart_screen_widgets/order_summary_widget.dart';
 import 'package:flutter/material.dart';
@@ -29,12 +30,11 @@ class CartScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 40),
+        padding: EdgeInsets.only(top: SizeConfig.defaultSize! * 2.8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            OrderChoicesWidget(),
-            DividerBoldWidget(),
+            AllOrderChoicesWidget(),
             HeadlineWidget(text: 'Special Requests'),
             OrderNoteTextfieldWidget(),
             DividerBoldWidget(),
@@ -42,10 +42,10 @@ class CartScreen extends StatelessWidget {
             OrderSummaryWidget(),
             Spacer(),
             ButtonYellowWidget(
-              paddingLeft: 20,
-              paddingRight: 20,
+              paddingLeft: SizeConfig.defaultSize! * 1.4,
+              paddingRight: SizeConfig.defaultSize! * 1.4,
               paddingTop: 0,
-              paddingBottom: 120,
+              paddingBottom: SizeConfig.defaultSize! * 6,
               text: 'Checkout',
               onTap: () {
                 Get.to(() => CheckoutScreen());

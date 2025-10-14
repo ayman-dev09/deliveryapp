@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class HeadlineWidget extends StatelessWidget {
@@ -7,10 +8,17 @@ class HeadlineWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.4,
+        right: SizeConfig.defaultSize! * 1.4,
+        top: SizeConfig.defaultSize! * 1.4,
+      ),
       child: Text(
         text,
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        style: TextStyle(
+          fontSize: SizeConfig.defaultSize! * 1.2,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
