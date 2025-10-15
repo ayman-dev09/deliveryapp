@@ -8,7 +8,7 @@ class AdditionsListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: SizeConfig.defaultSize! * 26.5,
+      height: SizeConfig.defaultSize! * 24.5,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

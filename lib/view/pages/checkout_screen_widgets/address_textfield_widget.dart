@@ -1,4 +1,5 @@
 import 'package:deliveryapp/themes/colors.dart';
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class AddressTextfieldWidget extends StatelessWidget {
@@ -7,30 +8,40 @@ class AddressTextfieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.8,
+        right: SizeConfig.defaultSize! * 1.8,
+        top: SizeConfig.defaultSize! * 1.4,
+      ),
       child: Container(
         width: double.infinity,
-        height: 80,
+        height: SizeConfig.defaultSize! * 5.56,
         decoration: BoxDecoration(
           //color: Colors.amber,
           border: Border.all(color: paletteColor),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(width: 10),
+            SizedBox(width: SizeConfig.defaultSize! * 0.7),
             Icon(Icons.location_on, color: Colors.green),
-            SizedBox(width: 10),
+            SizedBox(width: SizeConfig.defaultSize! * 0.7),
             Expanded(
               child: TextField(
                 focusNode: AlwaysFocusedNode(),
                 decoration: InputDecoration(
                   label: Text(
                     'Home',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: SizeConfig.defaultSize! * 1.2,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  hint: Text('Address', style: TextStyle(fontSize: 14)),
+                  hint: Text(
+                    'Address',
+                    style: TextStyle(fontSize: SizeConfig.defaultSize! * 1),
+                  ),
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide.none,
                   ),
@@ -40,16 +51,18 @@ class AddressTextfieldWidget extends StatelessWidget {
             Card(
               //elevation: 5,
               child: Container(
-                width: 100,
-                height: 40,
+                width: SizeConfig.defaultSize! * 7,
+                height: SizeConfig.defaultSize! * 2.8,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(
+                    SizeConfig.defaultSize! * 0.7,
+                  ),
                   border: Border.all(color: paletteColor),
                 ),
                 child: Center(child: Text('change')),
               ),
             ),
-            SizedBox(width: 15),
+            SizedBox(width: SizeConfig.defaultSize! * 1),
           ],
         ),
       ),

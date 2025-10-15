@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class ButtonBlackWidget extends StatelessWidget {
@@ -6,20 +7,24 @@ class ButtonBlackWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, bottom: 120),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.4,
+        right: SizeConfig.defaultSize! * 1.4,
+        bottom: SizeConfig.defaultSize! * 8.4,
+      ),
       child: Container(
         width: double.infinity,
-        height: 60,
+        height: SizeConfig.defaultSize! * 4.19,
         decoration: BoxDecoration(
           color: Colors.black,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
         ),
         child: Center(
           child: Text(
             'Order Now',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 20,
+              fontSize: SizeConfig.defaultSize! * 1.4,
               fontWeight: FontWeight.bold,
             ),
           ),

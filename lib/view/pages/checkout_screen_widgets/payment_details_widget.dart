@@ -1,4 +1,5 @@
 import 'package:deliveryapp/themes/colors.dart';
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class PaymentDetailsWidget extends StatefulWidget {
@@ -13,22 +14,29 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+      padding: EdgeInsets.only(
+        left: SizeConfig.defaultSize! * 1.4,
+        right: SizeConfig.defaultSize! * 1.4,
+        top: SizeConfig.defaultSize! * 1,
+      ),
       child: Container(
         width: double.infinity,
-        height: 80,
+        height: SizeConfig.defaultSize! * 5.56,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
           border: Border.all(color: paletteColor),
         ),
         child: Row(
           children: [
-            SizedBox(width: 15),
+            SizedBox(width: SizeConfig.defaultSize! * 1),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Use DeliveryApp Balance', style: TextStyle(fontSize: 16)),
+                Text(
+                  'Use DeliveryApp Balance',
+                  style: TextStyle(fontSize: SizeConfig.defaultSize! * 1.1),
+                ),
                 Text('0.0 SAR'),
               ],
             ),
@@ -44,7 +52,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
                 });
               },
             ),
-            SizedBox(width: 15),
+            SizedBox(width: SizeConfig.defaultSize! * 1),
           ],
         ),
       ),

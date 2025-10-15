@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:deliveryapp/view/pages/cart_screen_widgets/cart_screen.dart';
 import 'package:deliveryapp/view/pages/general_widgets/button_yellow_widget.dart';
 import 'package:deliveryapp/view/pages/home_screen_widgets/appbar_home_screen_widget.dart';
@@ -50,14 +51,14 @@ class HomeScreen extends StatelessWidget {
             color: Colors.transparent,
             child: Container(
               width: double.infinity,
-              height: 300,
+              height: SizeConfig.defaultSize! * 21,
               margin: EdgeInsets.only(bottom: 0, left: 0, right: 0),
               padding: EdgeInsets.all(0),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15),
-                  topRight: Radius.circular(15),
+                  topLeft: Radius.circular(SizeConfig.defaultSize! * 1),
+                  topRight: Radius.circular(SizeConfig.defaultSize! * 1),
                 ),
               ),
               child: Column(
@@ -69,10 +70,10 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Expanded(
                         child: ButtonYellowWidget(
-                          paddingLeft: 20,
+                          paddingLeft: SizeConfig.defaultSize! * 1.4,
                           paddingRight: 0,
                           paddingTop: 0,
-                          paddingBottom: 30,
+                          paddingBottom: SizeConfig.defaultSize! * 2.1,
                           text: 'Addition',
                           onTap: () {
                             Get.to(() => MealDetailsScreen());
@@ -81,10 +82,10 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Expanded(
                         child: ButtonYellowWidget(
-                          paddingLeft: 20,
-                          paddingRight: 20,
+                          paddingLeft: SizeConfig.defaultSize! * 1.4,
+                          paddingRight: SizeConfig.defaultSize! * 1.4,
                           paddingTop: 0,
-                          paddingBottom: 30,
+                          paddingBottom: SizeConfig.defaultSize! * 2.1,
                           text: 'Go To Cart',
                           onTap: () {
                             Get.to(() => CartScreen());
@@ -94,9 +95,9 @@ class HomeScreen extends StatelessWidget {
                       Expanded(
                         child: ButtonYellowWidget(
                           paddingLeft: 0,
-                          paddingRight: 20,
+                          paddingRight: SizeConfig.defaultSize! * 1.4,
                           paddingTop: 0,
-                          paddingBottom: 30,
+                          paddingBottom: SizeConfig.defaultSize! * 2.1,
                           text: 'Add Cart',
                           onTap: () {},
                         ),

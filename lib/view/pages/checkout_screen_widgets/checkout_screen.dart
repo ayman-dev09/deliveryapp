@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:deliveryapp/view/pages/checkout_screen_widgets/address_textfield_widget.dart';
 import 'package:deliveryapp/view/pages/checkout_screen_widgets/checkout_order_summary_widget.dart';
 import 'package:deliveryapp/view/pages/checkout_screen_widgets/payment_details_widget.dart';
@@ -32,7 +33,7 @@ class CheckoutScreen extends StatelessWidget {
           PaymentDetailsWidget(),
           HeadlineWidget(text: 'Order Summary'),
           Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: EdgeInsets.only(left: SizeConfig.defaultSize! * 1.4),
             child: Text(
               'By Ordering you agree to our Terms & Conditions, VAT 15% included',
             ),

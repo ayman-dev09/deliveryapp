@@ -1,3 +1,4 @@
+import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class ButtonYellowWidget extends StatelessWidget {
@@ -30,15 +31,18 @@ class ButtonYellowWidget extends StatelessWidget {
         onTap: onTap,
         child: Container(
           width: double.infinity,
-          height: 60,
+          height: SizeConfig.defaultSize! * 4.2,
           decoration: BoxDecoration(
             color: Colors.amber,
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
           ),
           child: Center(
             child: Text(
               text,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: SizeConfig.defaultSize! * 1.1,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),

@@ -17,7 +17,7 @@ class TitleAdditionsWidget extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(
-            top: SizeConfig.defaultSize! * 1.4,
+            top: SizeConfig.defaultSize! * 1.1,
             left: SizeConfig.defaultSize! * 1.8,
           ),
           child: Text(

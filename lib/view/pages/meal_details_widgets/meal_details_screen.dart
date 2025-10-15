@@ -36,7 +36,7 @@ class MealDetailsScreen extends StatelessWidget {
               left: SizeConfig.defaultSize! * 1.8,
               right: SizeConfig.defaultSize! * 1.8,
               top: SizeConfig.defaultSize! * 2.1,
-              bottom: SizeConfig.defaultSize! * 5,
+              bottom: SizeConfig.defaultSize! * 2,
             ),
             child: Row(
               children: [
