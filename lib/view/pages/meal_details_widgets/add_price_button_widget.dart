@@ -25,9 +25,21 @@ class AddPriceButtonWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(width: SizeConfig.defaultSize! * 1.4),
-            Text('Add', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(
+              'Add',
+              style: TextStyle(
+                fontSize: SizeConfig.defaultSize! * 1.1,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             Spacer(),
-            Text('19 SAR', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(
+              '19 SAR',
+              style: TextStyle(
+                fontSize: SizeConfig.defaultSize! * 1.1,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             SizedBox(width: SizeConfig.defaultSize! * 1.4),
           ],
         ),

@@ -21,7 +21,13 @@ class AddSubtractButtonWidget extends StatelessWidget {
           //SizedBox(width: SizeConfig.defaultSize! * 1.4),
           IconButton(onPressed: () {}, icon: Icon(Icons.remove)),
           Spacer(),
-          Text('1'),
+          Text(
+            '1',
+            style: TextStyle(
+              fontSize: SizeConfig.defaultSize! * 1.1,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           Spacer(),
           IconButton(onPressed: () {}, icon: Icon(Icons.add)),
           // SizedBox(width: SizeConfig.defaultSize! * 1.4),

@@ -2,30 +2,48 @@ import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class ButtonBlackWidget extends StatelessWidget {
-  const ButtonBlackWidget({super.key});
+  const ButtonBlackWidget({
+    super.key,
+    required this.leftPadding,
+    required this.rightPadding,
+    required this.topPadding,
+    required this.bottomPadding,
+    required this.onTap,
+    required this.textButton,
+  });
+  final double leftPadding;
+  final double rightPadding;
+  final double topPadding;
+  final double bottomPadding;
+  final Function()? onTap;
+  final String textButton;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        left: SizeConfig.defaultSize! * 1.4,
-        right: SizeConfig.defaultSize! * 1.4,
-        bottom: SizeConfig.defaultSize! * 8.4,
+      padding: EdgeInsets.fromLTRB(
+        leftPadding,
+        topPadding,
+        rightPadding,
+        bottomPadding,
       ),
-      child: Container(
-        width: double.infinity,
-        height: SizeConfig.defaultSize! * 4.19,
-        decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
-        ),
-        child: Center(
-          child: Text(
-            'Order Now',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: SizeConfig.defaultSize! * 1.4,
-              fontWeight: FontWeight.bold,
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          width: double.infinity,
+          height: SizeConfig.defaultSize! * 4.2,
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(SizeConfig.defaultSize! * 0.7),
+          ),
+          child: Center(
+            child: Text(
+              textButton,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: SizeConfig.defaultSize! * 1.1,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),

@@ -40,7 +40,14 @@ class CheckoutScreen extends StatelessWidget {
           ),
           CheckoutOrderSummaryWidget(),
           Spacer(),
-          ButtonBlackWidget(),
+          ButtonBlackWidget(
+            leftPadding: SizeConfig.defaultSize! * 1.4,
+            rightPadding: SizeConfig.defaultSize! * 1.4,
+            topPadding: 0,
+            bottomPadding: SizeConfig.defaultSize! * 3,
+            onTap: () {},
+            textButton: 'Order Now',
+          ),
         ],
       ),
     );
