@@ -35,10 +35,26 @@ class CartScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AllOrderChoicesWidget(),
-            HeadlineWidget(text: 'Special Requests'),
+            HeadlineWidget(
+              text: 'Special Requests',
+              leftPadding: SizeConfig.defaultSize! * 1.4,
+              rightPadding: SizeConfig.defaultSize! * 1.4,
+              topPadding: SizeConfig.defaultSize! * 1.4,
+              bottomPadding: 0,
+              fontSize: SizeConfig.defaultSize! * 1.2,
+              color: null,
+            ),
             OrderNoteTextfieldWidget(),
             DividerBoldWidget(),
-            HeadlineWidget(text: 'Order Summary'),
+            HeadlineWidget(
+              text: 'Order Summary',
+              leftPadding: SizeConfig.defaultSize! * 1.4,
+              rightPadding: SizeConfig.defaultSize! * 1.4,
+              topPadding: SizeConfig.defaultSize! * 1.4,
+              bottomPadding: 0,
+              fontSize: SizeConfig.defaultSize! * 1.2,
+              color: null,
+            ),
             OrderSummaryWidget(),
             Spacer(),
             ButtonYellowWidget(

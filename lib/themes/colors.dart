@@ -26,7 +26,7 @@ const Color blackColor20 = Color(0xFFD0D0D2);
 const Color blackColor10 = Color(0xFFE8E8E9);
 const Color blackColor5 = Color(0xFFF3F3F4);
 
-const Color whiteColor = Colors.white;
+const Color whiteColor = Color(0xFFFFFFFF);
 const Color whileColor80 = Color(0xFFCCCCCC);
 const Color whileColor60 = Color(0xFF999999);
 const Color whileColor40 = Color(0xFF666666);

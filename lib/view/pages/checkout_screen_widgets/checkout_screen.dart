@@ -1,3 +1,4 @@
+import 'package:deliveryapp/themes/colors.dart';
 import 'package:deliveryapp/utils/size_config.dart';
 import 'package:deliveryapp/view/pages/checkout_screen_widgets/address_textfield_widget.dart';
 import 'package:deliveryapp/view/pages/checkout_screen_widgets/checkout_order_summary_widget.dart';
@@ -16,7 +17,10 @@ class CheckoutScreen extends StatelessWidget {
         title: Column(
           children: [
             Text('Checkout', style: TextStyle(fontWeight: FontWeight.bold)),
-            Text('Wahmy Burger', style: TextStyle(fontSize: 10)),
+            Text(
+              'Wahmy Burger',
+              style: TextStyle(fontSize: SizeConfig.defaultSize! * 0.7),
+            ),
           ],
         ),
         centerTitle: true,
@@ -29,9 +33,25 @@ class CheckoutScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AddressTextfieldWidget(),
-          HeadlineWidget(text: 'Payment Details'),
+          HeadlineWidget(
+            text: 'Payment Details',
+            leftPadding: SizeConfig.defaultSize! * 1.4,
+            rightPadding: SizeConfig.defaultSize! * 1.4,
+            topPadding: SizeConfig.defaultSize! * 1.4,
+            bottomPadding: 0,
+            fontSize: SizeConfig.defaultSize! * 1.2,
+            color: blackColor,
+          ),
           PaymentDetailsWidget(),
-          HeadlineWidget(text: 'Order Summary'),
+          HeadlineWidget(
+            text: 'Order Summary',
+            leftPadding: SizeConfig.defaultSize! * 1.4,
+            rightPadding: SizeConfig.defaultSize! * 1.4,
+            topPadding: SizeConfig.defaultSize! * 1.4,
+            bottomPadding: 0,
+            fontSize: SizeConfig.defaultSize! * 1.2,
+            color: blackColor,
+          ),
           Padding(
             padding: EdgeInsets.only(left: SizeConfig.defaultSize! * 1.4),
             child: Text(

@@ -5,6 +5,8 @@ import 'package:deliveryapp/utils/size_config.dart';
 import 'package:deliveryapp/view/pages/general_widgets/button_yellow_widget.dart';
 import 'package:deliveryapp/view/pages/general_widgets/text_button_widget.dart';
 import 'package:deliveryapp/view/pages/general_widgets/text_with_textbutton_widget.dart';
+import 'package:deliveryapp/view/pages/general_widgets/textfield_email_widget.dart';
+import 'package:deliveryapp/view/pages/general_widgets/textfield_password_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -27,64 +29,21 @@ class LoginScreen extends StatelessWidget {
               child: Image.asset(yallaLogoApp),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: SizeConfig.defaultSize! * 6,
-              right: SizeConfig.defaultSize! * 6,
-              top: SizeConfig.defaultSize! * 3.5,
-            ),
-            child: Container(
-              width: double.infinity,
-              height: SizeConfig.defaultSize! * 3.5,
-              padding: EdgeInsets.only(left: SizeConfig.defaultSize!),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(
-                  SizeConfig.defaultSize! * 0.4,
-                ),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Email',
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide.none,
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide.none,
-                  ),
-                ),
-              ),
-            ),
+          TextfieldEmailWidget(
+            leftPadding: SizeConfig.defaultSize! * 6,
+            rightPadding: SizeConfig.defaultSize! * 6,
+            topPadding: SizeConfig.defaultSize! * 3.5,
+            bottomPadding: 0,
+            hintText: 'Email',
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: SizeConfig.defaultSize! * 6,
-              right: SizeConfig.defaultSize! * 6,
-              top: SizeConfig.defaultSize! * 1.5,
-            ),
-            child: Container(
-              width: double.infinity,
-              height: SizeConfig.defaultSize! * 3.5,
-              padding: EdgeInsets.only(left: SizeConfig.defaultSize!),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(
-                  SizeConfig.defaultSize! * 0.4,
-                ),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Password',
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide.none,
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide.none,
-                  ),
-                ),
-              ),
-            ),
+          TextfieldPasswordWidget(
+            leftPadding: SizeConfig.defaultSize! * 6,
+            rightPadding: SizeConfig.defaultSize! * 6,
+            topPadding: SizeConfig.defaultSize! * 1.5,
+            bottomPadding: 0,
+            hintText: 'Password',
           ),
+
           TextButtonWidget(
             paddingLeft: 0,
             paddingRight: SizeConfig.defaultSize! * 6,
@@ -98,7 +57,9 @@ class LoginScreen extends StatelessWidget {
             paddingRight: 0,
             paddingTop: SizeConfig.defaultSize! * 0.7,
             paddingBottom: 0,
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(signupScreen);
+            },
             text: 'to register a new account ?',
             textButton: 'Signup',
           ),

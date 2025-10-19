@@ -37,7 +37,7 @@ class TextWithTextbuttonWidget extends StatelessWidget {
           Text(text, style: TextStyle(color: paletteColor)),
           SizedBox(width: SizeConfig.defaultSize! * 0.4),
           InkWell(
-            onTap: () {},
+            onTap: onPressed,
             child: Text(
               textButton,
               style: TextStyle(
