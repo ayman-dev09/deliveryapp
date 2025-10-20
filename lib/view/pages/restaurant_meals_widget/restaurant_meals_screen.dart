@@ -1,4 +1,7 @@
 import 'package:deliveryapp/utils/constants.dart';
+import 'package:deliveryapp/utils/size_config.dart';
+import 'package:deliveryapp/view/pages/general_widgets/divider_small_widget.dart';
+import 'package:deliveryapp/view/pages/restaurant_meals_widget/restaurant_list_widget.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantMealsScreen extends StatelessWidget {
@@ -7,40 +10,32 @@ class RestaurantMealsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-              child: Container(
-                width: double.infinity,
-                height: 150,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(burgerKingImage)),
-                ),
+      body: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.fromLTRB(
+              0,
+              SizeConfig.defaultSize! * 1.4,
+              0,
+              0,
+            ),
+            child: Container(
+              width: double.infinity,
+              height: SizeConfig.defaultSize! * 10.5,
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage(burgerKingImage)),
               ),
             ),
-            SizedBox(height: 20),
-            Column(
-              children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Column(
-                        children: [
-                          Text('Nafar Mandy Goat'),
-                          Text(
-                            'Goat meat and rice with a special mixture of spices cooked in the traditional way',
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+          ),
+          DividerSmallWidget(
+            leftPadding: 0,
+            rightPadding: 0,
+            topPadding: SizeConfig.defaultSize! * 0.7,
+            bottomPadding: 0,
+          ),
+          // SizedBox(height: SizeConfig.defaultSize! * 0.7),
+          Expanded(child: RestaurantListWidget()),
+        ],
       ),
     );
   }
