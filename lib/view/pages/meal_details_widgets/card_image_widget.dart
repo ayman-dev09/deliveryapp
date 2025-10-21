@@ -8,7 +8,7 @@ class CardImageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: SizeConfig.defaultSize! * 4,
+        top: SizeConfig.defaultSize! * 3,
         left: SizeConfig.defaultSize! * 1.8,
         right: SizeConfig.defaultSize! * 1.8,
       ),

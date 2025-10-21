@@ -14,39 +14,41 @@ class MealDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CardImageWidget(),
-          MealTitleSubtitleWidget(),
-          DividerLargeWidget(),
-          TitleAdditionsWidget(
-            title: 'Add The Items',
-            subTitle: 'up to 4 selections',
-          ),
-          AdditionsListWidget(),
-          Spacer(),
-          TitleAdditionsWidget(
-            title: 'Add The Items',
-            subTitle: 'up to 4 selections',
-          ),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CardImageWidget(),
+            MealTitleSubtitleWidget(),
+            DividerLargeWidget(),
+            TitleAdditionsWidget(
+              title: 'Add The Items',
+              subTitle: 'up to 4 selections',
+            ),
+            AdditionsListWidget(),
+            Spacer(),
+            TitleAdditionsWidget(
+              title: 'Add The Items',
+              subTitle: 'up to 4 selections',
+            ),
 
-          Padding(
-            padding: EdgeInsets.only(
-              left: SizeConfig.defaultSize! * 1.8,
-              right: SizeConfig.defaultSize! * 1.8,
-              top: SizeConfig.defaultSize! * 2.1,
-              bottom: SizeConfig.defaultSize! * 3,
+            Padding(
+              padding: EdgeInsets.only(
+                left: SizeConfig.defaultSize! * 1.8,
+                right: SizeConfig.defaultSize! * 1.8,
+                top: SizeConfig.defaultSize! * 2.1,
+                bottom: SizeConfig.defaultSize! * 3,
+              ),
+              child: Row(
+                children: [
+                  AddSubtractButtonWidget(),
+                  Spacer(),
+                  AddPriceButtonWidget(),
+                ],
+              ),
             ),
-            child: Row(
-              children: [
-                AddSubtractButtonWidget(),
-                Spacer(),
-                AddPriceButtonWidget(),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -17,6 +17,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: LoginScreen(),
       getPages: RoutesConfig().getPages,
+      builder: (context, child) {
+        SizeConfig().init(context);
+        return child!;
+      },
     );
   }
 }
