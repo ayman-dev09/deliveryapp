@@ -1,5 +1,5 @@
 import 'package:deliveryapp/utils/size_config.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/additions_widget.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/additions_widget.dart';
 import 'package:flutter/material.dart';
 
 class AdditionsListWidget extends StatelessWidget {

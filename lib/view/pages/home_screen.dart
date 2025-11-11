@@ -6,7 +6,7 @@ import 'package:deliveryapp/view/pages/home_screen_widgets/explore_list_widget.d
 import 'package:deliveryapp/view/pages/home_screen_widgets/meals_list_widget.dart';
 import 'package:deliveryapp/view/pages/home_screen_widgets/top_rated_widget.dart';
 import 'package:deliveryapp/view/pages/home_screen_widgets/username_text_widget.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/meal_details_screen.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/meal_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';

@@ -1,11 +1,11 @@
 import 'package:deliveryapp/utils/size_config.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/add_price_button_widget.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/add_subtract_button_widget.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/additions_list_widget.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/card_image_widget.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/divider_large_widget.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/meal_title_subtitle_widget.dart';
-import 'package:deliveryapp/view/pages/meal_details_widgets/title_additions_widget.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/add_price_button_widget.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/add_subtract_button_widget.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/additions_list_widget.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/card_image_widget.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/divider_large_widget.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/meal_title_subtitle_widget.dart';
+import 'package:deliveryapp/view/pages/meal_details_screen_widgets/title_additions_widget.dart';
 import 'package:flutter/material.dart';
 
 class MealDetailsScreen extends StatelessWidget {
