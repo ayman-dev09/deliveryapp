@@ -3,7 +3,8 @@ import 'package:deliveryapp/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class AppbarHomeScreenWidget extends StatelessWidget {
-  const AppbarHomeScreenWidget({super.key});
+  final GlobalKey<ScaffoldState> scaffoldKey;
+  const AppbarHomeScreenWidget({super.key, required this.scaffoldKey});
 
   @override
   Widget build(BuildContext context) {
@@ -63,10 +64,16 @@ class AppbarHomeScreenWidget extends StatelessWidget {
                     ),
 
                     Spacer(),
-                    Icon(
-                      Icons.shopping_bag_outlined,
-                      color: Colors.white,
-                      size: SizeConfig.defaultSize! * 1.7,
+                    //----------------
+                    InkWell(
+                      child: Icon(
+                        Icons.shopping_bag_outlined,
+                        color: Colors.white,
+                        size: SizeConfig.defaultSize! * 1.7,
+                      ),
+                      onTap: () {
+                        scaffoldKey.currentState?.openDrawer();
+                      },
                     ),
                   ],
                 ),

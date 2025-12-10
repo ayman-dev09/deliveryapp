@@ -9,11 +9,12 @@ class SizeConfig {
 
   void init(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    double screenWidth = mediaQueryData!.size.width;
-    double screenHeight = mediaQueryData!.size.height;
+    screenWidth = mediaQueryData!.size.width;
+    screenHeight = mediaQueryData!.size.height;
+    orientation = mediaQueryData!.orientation;
     defaultSize = orientation == Orientation.landscape
-        ? screenHeight * 0.024
-        : screenWidth * 0.024;
+        ? screenHeight! * 0.024
+        : screenWidth! * 0.024;
     debugPrint('defaultSize =====> $defaultSize');
   }
 }
@@ -36,3 +37,9 @@ double getWidth(double inputWidth) {
   // 375 is the layout width that Figma provides
   return (inputWidth / 375.0) * screenWidth!;
 }
+
+//It is very important that she be summoned in first page
+// Widget build(BuildContext context) {
+    
+//     SizeConfig().init(context);
+//     return Scaffold(

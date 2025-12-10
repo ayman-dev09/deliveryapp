@@ -12,16 +12,20 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
+  HomeScreen({super.key});
+  //HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: Drawer(child: Container()),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            AppbarHomeScreenWidget(),
+            AppbarHomeScreenWidget(scaffoldKey: scaffoldKey),
             UsernameTextWidget(),
             ExploreListWidget(),
             MealsListWidget(

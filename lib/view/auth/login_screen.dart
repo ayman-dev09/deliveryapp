@@ -16,6 +16,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //It is very important that she be summoned in first page
+    SizeConfig().init(context);
     return Scaffold(
       backgroundColor: gentianblue,
       body: Column(
